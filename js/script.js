@@ -1,60 +1,28 @@
-// Função para registrar logs no painel
-const painelLog = document.getElementById('log-painel');
-function registrarLog(mensagem) {
-    const novaLinha = document.createElement('div');
-    novaLinha.textContent = `[${new Date().toLocaleTimeString()}] ${mensagem}`;
-    painelLog.appendChild(novaLinha);
-}
 
-// Evento de mouse: click
-const btnClique = document.getElementById('btn-clique');
-const areaMouse = document.getElementById('area-mouse');
+// Gravador de voz
 
-btnClique.addEventListener('click', function() {
-    registrarLog("Evento de mouse: Evento 'click' disparado!");
-});
-
-// Evento de mouse: mouseenter
-areaMouse.addEventListener('mouseenter', function() {
-    areaMouse.textContent = "Mouse entrou na área!";
-    areaMouse.style.backgroundColor = "red";
-    registrarLog("Evento de mouse: Evento 'mouseenter' disparado!");  
-});
-
-// Evento de mouse: mouseleave
-areaMouse.addEventListener('mouseleave', function(){
-areaMouse.textContent="Mouse saiu da área";
-areaMouse.style.backgroundColor="green";
-    registrarLog("Evento de mouse: Evento 'mouseleave' disparado!");
-});
+const statusGravacao=document.getElementById('status-gravacao');
+const btnGravador=document.getElementById('btn-gravador');
 
 
-// Evento de teclado: keydown
 
-const campoTeclado= document.getElementById('campo-teclado');
-campoTeclado.addEventListener('keydown', function(evento){
-    registrarLog("[TECLA PRESSIONADA] Teclado Evento de mouse: Evento 'keydown' disparado!");
+//  Primeiro evento de mouse mudar a cor para vermelho e mudar o status
+
+btnGravador.addEventListener('touchstart' , function(){
+btnGravador.textContent="🔴 Gravando...Não solte!";
+btnGravador.style.backgroundColor="#e74c3c";
+statusGravacao.textContent=" Status: Capturando áudio...";
 });
 
 
 
+// Segundo evento de mouse mudar para a cor original e mudar o status
+btnGravador.addEventListener( 'touchend', function() {
+    btnGravador.textContent="🎤 Clique e Segure para Gravar "
+    btnGravador.style.backgroundColor="#3498db";
+    statusGravacao.textContent=" Status: Gravação concluída e enviada!";
 
-// Evento de teclado: keyup
-campoTeclado.addEventListener('keyup', function(evento){
-    registrarLog("[TECLA LIBERADA]Evento de mouse: Evento 'keyup' disparado!");
+
+
+
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
