@@ -1,95 +1,118 @@
-:root {
-  --bg-color: #f4f7f6;
-  --card-bg: #ffffff;
-  --primary: #3498db;
-  --text: #2c3e50;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text);
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    min-height: 100vh;
+  background-color: rgb(8, 8, 36);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 
-h1 { 
-  margin-bottom: 30px; 
+/* CABEÇALHO */
+
+header {
+    text-align: center;
+    padding: 35px 20px;
 }
+
+
+.titulo-disney {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 55px;
+    text-align: center;
+    color: #ffffff;
+    margin: 30px 0;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 15px #4da6ff,
+        0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.titulo-disney span {
+    color: #4da6ff;
+    font-weight: bold;
+    text-shadow:
+        0 0 8px #ffffff,
+        0 0 20px #4da6ff;
+}
+
+
+#contador {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* CARDS */
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .card {
-  background: var(--card-bg);
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    background-color: white;
+    color: #222;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
 }
 
 .card h2 {
-  margin: 0 0 10px 0;
-  font-size: 1.2rem;
-  border-bottom: 2px solid #ecf0f1;
-  padding-bottom: 5px;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
 }
 
-button, input[type="submit"] {
-  background-color: var(--primary);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s;
+
+/* BOTÃO */
+
+#carregarMais {
+    display: block;
+    margin: 50px auto 20px;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding: 14px 30px;
+    background-color: #143753;
+    color: white;
+    font-size: 16px;
+    font-family: cursive;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-button:hover, input[type="submit"]:hover { 
-  background-color: #2980b9; 
+#carregarMais:hover {
+    background-color: rgba(32, 121, 223, 0.137);
+    color: white;
+    transform: scale(1.05);
 }
 
-input[type="text"] {
-  padding: 8px;
-  border: 1px solid #bdc3c7;
-  border-radius: 4px;
-  width: 100%;
-  box-sizing: border-box;
-}
 
-.box-teste {
-  height: 80px;
-  background-color: #e74c3c;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
+/* PÁGINA */
 
-#log-painel {
-  width: 100%;
-  max-width: 1000px;
-  background: #2c3e50;
-  color: #2ecc71;
-  padding: 15px;
-  border-radius: 8px;
-  margin-top: 25px;
-  box-sizing: border-box;
-  height: 150px;
-  overflow-y: auto;
-  font-family: monospace;
+#pagina {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
 }
