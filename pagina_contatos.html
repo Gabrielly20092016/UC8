@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos de Emergência</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="contatos-body">
+
+    <div class="container">
+
+        <h1>CONTATOS DE EMERGÊNCIA</h1>
+
+
+        <!-- Isso e um formulário paar o usuaro colocar as informações da pessoa  -->
+        <div class="formulario">
+
+            <input type="text" id="nome" placeholder="Nome do contato">
+
+            <input type="tel" id="numero" placeholder="Telefone">
+
+            <button onclick="adicionarContato()">
+                + ADICIONAR CONTATO
+            </button>
+
+<!-- Voltar para a pagina do sos -->
+<button class="voltar" onclick="window.location.href='pagina_sos.index.html'">
+    Voltar
+</button>
+          
+        </div>
+
+        <div id="listaContatos"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

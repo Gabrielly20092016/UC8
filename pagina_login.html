@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: #F1ECFA;">
+
+<!-- Título -->
+<h2>Bem vinda de volta!</h2>
+<p>Faça o login para continuar</p>
+
+<!-- Botão voltar -->
+<a href="index.html">
+    <img src="imagem/seta.png" alt="Voltar" class="seta">
+</a>
+
+<br><br>
+
+<!-- LOGIN -->
+<form class="login">
+
+    <input type="email" id="email" placeholder="Digite seu email" required>
+
+    <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+    <!-- BOTÃO CORRIGIDO -->
+    <button type="button" class="lg" onclick="logar()">
+        Entrar
+    </button>
+
+</form>
+
+<!-- Esqueceu senha -->
+<a href="tela_criar_senha.html">
+    <p>Esqueceu sua senha?</p>
+</a>
+
+<hr>
+
+<!-- botão da google-->
+<div class="botao-google">
+    <button class="google-btn">
+        <a href="https://accounts.google.com/">
+            <img src="imagem/google.webp" alt="Google">
+            <span>Entrar com Google</span>
+        </a>
+    </button>
+</div>
+
+<p>Não tem conta? <a href="pagina_cadastro.html">Cadastrar-se</a></p>
+
+<script>
+function logar() {
+    let email = document.getElementById("email").value;
+    let senha = document.getElementById("senha").value;
+
+    if (email === "" || senha === "") {
+        alert("Preencha todos os campos!");
+        return;
+    }
+
+    alert("Bem-vinda de volta!");
+
+  
+    window.location.href ="pagina_sos.index.html";
+}
+</script>
+
+</body>
+</html>

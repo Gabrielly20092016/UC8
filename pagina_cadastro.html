@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: #F1ECFA;">
+
+<!-- seta -->
+<a href="pagina_login.html">
+    <img src="imagem/seta.png" alt="Voltar" class="seta">
+</a>
+
+<!-- imagem -->
+<div class="luna">
+    <img src="imagem/imagem do cadastro.png" alt="Cadastro">
+</div>
+
+<h1 class="cria">Crie sua conta</h1>
+
+<!-- FORM -->
+<form id="formCadastro">
+
+    <input type="text" id="nome" placeholder="Digite seu nome" required>
+    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+    <input type="tel" id="telefone" placeholder="Digite seu telefone" required>
+    <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+    <label>
+        <input type="checkbox" required>
+        <a href="termos_de_uso.index.html">
+            Li e aceito os Termos de Uso e a Política de Privacidade.
+        </a>
+    </label>
+
+    <button type="button" class="btn-criar" onclick="criarConta()">
+        Criar conta
+    </button>
+
+</form>
+
+
+
+<!-- divisor -->
+<div class="ou">
+    <hr>
+    <p>Ou</p>
+    <hr>
+</div>
+
+
+
+<!-- GOOGLE -->
+<div class="botao-google">
+    <button class="google-btn">
+        <a href="https://accounts.google.com/">
+            <img src="imagem/google.webp" alt="Google">
+            <span>Entrar com Google</span>
+        </a>
+    </button>
+</div>
+
+
+
+
+
+
+<script>
+
+function salvarDados() {
+    let nome = document.getElementById("nome").value;
+    let email = document.getElementById("email").value;
+    let telefone = document.getElementById("telefone").value;
+    let senha = document.getElementById("senha").value;
+
+    localStorage.setItem("nome", nome);
+    localStorage.setItem("email", email);
+    localStorage.setItem("telefone", telefone);
+    localStorage.setItem("senha", senha);
+}
+
+function criarConta() {
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const telefone = document.getElementById("telefone").value;
+    const senha = document.getElementById("senha").value;
+
+    // valida campos vazios
+    if (nome === "" || email === "" || telefone === "" || senha === "") {
+        alert("Preencha todos os campos!");
+        return;
+    }
+
+    // valida email
+    if (!email.includes("@") || !email.includes(".")) {
+        alert("Digite um e-mail válido!");
+        return;
+    }
+
+    // salva dados
+    salvarDados();
+
+    alert("Cadastro realizado com sucesso!");
+
+    // redireciona
+    window.location.href = "pagina_sos.index.html";
+}
+
+</script>

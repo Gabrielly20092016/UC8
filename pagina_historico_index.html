@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Alertas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="historico-body">
+
+    <a href="pagina_sos.index.html">
+        <img src="imagem/seta.png" class="seta2">
+    </a>
+<br>
+    <div class="historico-container">
+
+        <h2 class="historico-titulo">Histórico de Alertas</h2>
+
+        <div class="historico-tabs">
+            <button class="tab todos active" data-filter="all">Todos</button>
+            <button class="tab enviados" data-filter="enviado">Enviados</button>
+            <button class="tab cancelados" data-filter="cancelado">Cancelados</button>
+            <button class="tab concluido" data-filter="concluido">Concluído</button>
+        </div>
+
+        <div class="historico-lista">
+
+            <div class="alert-card enviados" data-status="enviado">
+                <h3>Alerta enviado</h3>
+                <p>16/05/2026 - 22:47</p>
+            </div>
+
+            <div class="alert-card enviados" data-status="enviado">
+                <h3>Alerta enviado</h3>
+                <p>21/03/2026 - 14:51</p>
+            </div>
+
+            <div class="alert-card cancelados" data-status="cancelado">
+                <h3>Alerta cancelado</h3>
+                <p>05/12/2025 - 21:33</p>
+            </div>
+            
+
+            <div class="alert-card cancelados" data-status="cancelado">
+                <h3>Alerta cancelado</h3>
+                <p>24/12/2025 - 18:33</p>
+            </div>
+
+            <div class="alert-card concluido" data-status="concluido">
+                <h3>Alerta concluído</h3>
+                <p>20/06/2026 - 18:20</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

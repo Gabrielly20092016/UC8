@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página SOS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>SafeHer</h1>
+
+    <a href="index.html">
+        <img src="imagem/seta.png" alt="Voltar" class="seta">
+    </a>
+
+    <div class="sos-box">
+
+        <p class="ajuda">PRECISA DE AJUDA?</p>
+
+        <img src="imagem/botaoroxo.png"
+             alt="Botão SOS"
+             class="botao-sos"
+             onclick="abrirModal()">
+
+        <p class="alerta">TOQUE PARA ENVIAR O ALERTA</p>
+
+    </div>
+
+    <div class="menu-opcoes">
+
+        <button class="opcao">
+            Compartilhar localização
+            <img src="imagem/localizacao.png" class="icone" alt="Localização">
+        </button>
+
+        <button class="opcao" onclick="window.location.href='pagina_contatos.html'">
+            Contatos de confiança
+            <img src="imagem/contatos.png" class="icone" alt="Contatos">
+        </button>
+
+        <button class="opcao" onclick="window.location.href='pagina_historico_index.html'">
+            Histórico de alertas
+            <img src="imagem/alertas.png" class="icone" alt="Alertas">
+        </button>
+
+        <button class="opcao">
+            Gravador de voz
+            <img src="imagem/gravador.png" class="icone" alt="Gravador">
+            </a>
+        </button>
+
+        <button class="opcao">
+            Configurações
+            <img src="imagem/configuracao.png" class="icone" alt="Configurações">
+        </button>
+
+    </div>
+
+    <div class="linha"></div>
+
+    <div class="menu">
+
+        <div class="item-menu">
+            <a href="index.html"></a>
+                <img src="imagem/home.png">
+                <p>Home</p>
+            </a>
+        </div>
+
+        <div class="item-menu">
+            <a href="pagina_contatos.html">
+                <img src="imagem/contatos.png">
+                <p>Contatos</p>
+            </a>
+        </div>
+
+        <div class="item-menu">
+            <a href="pagina_historico_index.html">
+                <img src="imagem/alertas.png">
+                <p>Alertas</p>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+
+    <div id="modal" class="modal">
+
+        <div class="janela">
+
+            <div id="confirmacao">
+
+                <h2>Enviar alerta agora?</h2>
+
+                <p>
+                    Seus contatos de emergência serão notificados com sua localização em tempo real.
+                </p>
+
+                <button class="enviar" onclick="enviarAlerta()">
+                    ENVIAR ALERTA
+                </button>
+
+            </div>
+
+            <div id="mensagem" class="mensagem-sucesso">
+
+                <h2>Alerta enviado com sucesso!</h2>
+
+                <p>
+                    Seus contatos foram notificados com sua localização em tempo real.
+                </p>
+
+            </div>
+
+            <button class="cancelar" onclick="fecharModal()">
+                CANCELAR
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
