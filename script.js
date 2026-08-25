@@ -57,19 +57,6 @@ function enviarAlerta() {
     document.getElementById("confirmacao").style.display = "none";
     document.getElementById("mensagem").style.display = "block";
 
-    // aqui entra a opção OK depois do envio
-    setTimeout(() => {
-        const ok = document.createElement("button");
-        ok.innerText = "OK";
-        ok.className = "ok-btn";
-
-        ok.onclick = () => {
-            fecharModal(); // fecha tudo ao clicar em OK
-            ok.remove();   // remove botão depois de usar
-        };
-
-        document.querySelector(".janela").appendChild(ok);
-    }, 300);
 }
 
 
@@ -181,3 +168,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+// Alteração do código em javascript
+// Evento de mouse 
+
+
+// Página do sos evento de  touchstart e touchend
+
+const botaoSOS = document.getElementById("botaoSOS");
+
+if (botaoSOS) {
+
+    // 1º evento: quando começa o toque
+    botaoSOS.addEventListener("touchstart", () => {
+        console.log("Toque iniciado");
+    });
+
+    // 2º evento: quando termina o toque
+    botaoSOS.addEventListener("touchend", () => {
+        abrirModal();
+    });
+
+}
+
+
+
+
+// Evento de esconder a mensagem da pagina do sos
+
+
+const botao = document.getElementById("mostrarMensagem");
+const texto = document.getElementById("texto");
+
+if (botao) {
+    botao.addEventListener("click", () => {
+        if (texto.style.display === "none") {
+            texto.style.display = "block";
+        } else {
+          texto.style.display = "none";
+        
+            texto.remove();   // remove botão depois de usar
+    
+        }
+    });
+}
