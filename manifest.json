@@ -1,39 +1,31 @@
 {
-  "name": "Gravador de voz",
-  "short_name": "gravador",
-  "start_url": "/miss-o-111/",
-  "display": "standalone",
-  "icons": [
-    
-    {
-      "src": "https://github.githubassets.com/assets/app-icon-192-bcc967ab9829.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "https://github.githubassets.com/assets/app-icon-512-7f9c4ff2e960.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "prefer_related_applications": true,
-  "related_applications": [
-    {
-      "platform": "play",
-      "url": "https://play.google.com/store/apps/details?id=com.github.android",
-      "id": "com.github.android"
-    }
-    
-  ],
-  "theme_color": "#3498db",
-  "background_color": "#ffffff",
-  "id": "gravador de voz",
-  "description": "Simulador de gravador de voz",
+  "background_color": "#3498db",
   "dir": "ltr",
-  "scope": "/miss-o-111/",
-  "lang": "pt",
+  "display": "standalone",
+  "name": "Gravador de áudio",
   "orientation": "portrait",
+  "scope": "/",
+  "short_name": "gravador",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "id": "gravador",
+  "description": "Simulador de gravador de voz",
+  "lang": "pt-BR",
   "categories": [
     "utilities"
+  ],
+
+  
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
 }

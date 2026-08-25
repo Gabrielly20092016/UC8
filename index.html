@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Gravador de Áudio</title>
-    
-
-    <link rel="icon" type="image/png" href="icons/icon-192.png">.
-    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icons/icon-192x192.png">. 
+     <link rel="manifest" href="manifest.json">.
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div class="container-gravador">
         
-        <!-- Botão que para clicar em gravar -->
+        <!-- Botão para clicar em gravar -->
         <button id="btn-gravador">
             🎤 Clique e Segure para Gravar
         </button>
@@ -24,9 +22,16 @@
             Status: Pronto para gravar
         </p>
 
+
+        <!-- Inserir essa linha
+        Player para o aluno ouvir a própria gravação após soltar -->
+        <audio id="player-audio" controls style="margin-top: 15px; display: none;"></audio>
+
+
+
+
     </div>
 
     <script src="js/script.js"></script>
-
 </body>
 </html>
