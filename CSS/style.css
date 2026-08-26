@@ -1,0 +1,175 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(circle at 20% 30%, #ffffff 0 1px, transparent 2px),
+        radial-gradient(circle at 70% 20%, #bde7ff 0 2px, transparent 3px),
+        radial-gradient(circle at 40% 80%, #ffffff 0 1px, transparent 2px),
+        radial-gradient(circle at 90% 70%, #8fd8ff 0 2px, transparent 3px),
+        linear-gradient(135deg, #020b24, #062b5c, #075da8);
+
+
+    background-size:
+        120px 120px,
+        170px 170px,
+        140px 140px,
+        190px 190px,
+        100% 100%;
+
+    animation: glitter 4s ease-in-out infinite alternate;
+}
+
+@keyframes glitter {
+    0% {
+        background-position:
+            0 0,
+            20px 30px,
+            40px 10px,
+            80px 50px,
+            center;
+    }
+
+    50% {
+        background-position:
+            30px 20px,
+            50px 60px,
+            10px 40px,
+            100px 20px,
+            center;
+    }
+
+    100% {
+        background-position:
+            60px 40px,
+            80px 20px,
+            30px 70px,
+            50px 80px,
+            center;
+    }
+}
+
+h1{
+    text-align: center;
+    font-family:'Waltograph', 'New Walt Disney Font', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #ffd6f2,
+        0 0 20px hsl(330, 100%, 71%),
+        3px 3px 0 #a80d6d;
+    letter-spacing: 3px;
+    margin: 30px 0 10px;
+    animation: brilho 2s infinite alternate;
+}
+
+@keyframes brilho {
+    from {
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #ffd6f2,
+            0 0 20px #ff69b4;
+    }
+
+    to {
+        text-shadow:
+            0 0 10px #fff,
+            0 0 20px #ffb6df,
+            0 0 35px #ff69b4;
+    }
+
+}
+
+
+
+p{ 
+    text-align: center;
+}
+
+#carregarMais{
+  display: block;
+    margin: 50px auto 20px;
+}
+
+
+
+#contador {
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+/* Card */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+   background-color: #e8f7ff;
+    color: #082b52;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+
+.card h2 {
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+#carregarMais {
+    display: block;
+    margin: 50px auto 20px;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding: 14px 30px;
+    background-color: #143753;
+    color: white;
+    font-size: 16px;
+    font-family: cursive;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#carregarMais:hover {
+    background-color: rgba(32, 121, 223, 0.137);
+    color: white;
+    transform: scale(1.05);
+}
+
+
+/* PÁGINA */
+
+#pagina {
+    color:white;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
